@@ -23,6 +23,8 @@
   --backdrop-cl: rgba(0, 0, 0, 0.2);
   --pseudo-bg-color: rgba(47, 48, 58, 0.8);
   --overlay-secondary: rgba(33, 150, 243, 0.9);
+
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Отключает точки в списках */
 .list {
@@ -109,7 +111,7 @@ img {
   line-height: 1.143;
   letter-spacing: 0.02em;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms var(--cubic);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -135,7 +137,7 @@ img {
   border-radius: 2px;
   background-color: var(--accent-text-color);
   transform: scaleX(0);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms var(--cubic);
 }
 .link.current::after {
   transform: scaleX(1);
@@ -168,7 +170,9 @@ img {
 .logo:focus {
   color: var(--accent-text-color);
 }
-
+.icon {
+  transition: fill 250ms var(--cubic);
+}
 .icon-contacts {
   margin-right: 10px;
 }
@@ -388,7 +392,7 @@ img {
 .icon-clients {
   border: 1px solid var(--socials-color);
   border-radius: 4px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms var(--cubic);
 }
 .clients-link:hover .icon-clients,
 .clients-link:focus .icon-clients {
@@ -429,7 +433,7 @@ img {
 
   border: 1px solid var(--portfolio-border);
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms var(--cubic);
 }
 .porfolio-link:hover,
 .porfolio-link:focus {
@@ -450,7 +454,7 @@ img {
   height: 100%;
   background-color: var(--overlay-secondary);
   transform: translateY(100%);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms var(--cubic);
 }
 
 .porfolio-link:hover .portfolio-thumb::before,
@@ -470,7 +474,7 @@ img {
   line-height: 1.55;
   color: var(--primary-white-color);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms var(--cubic);
 }
 
 .porfolio-link:hover .thumb-text,
@@ -508,7 +512,7 @@ img {
   border: transparent;
   border-radius: 4px;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms var(--cubic);
 }
 .button.primary {
   padding: 10px 32px;
@@ -556,8 +560,11 @@ img {
   align-items: baseline;
 }
 
-.footer-box:not(:last-child) {
+.footer-box:nth-child(1) {
   margin-right: 70px;
+}
+.footer-box:nth-child(2) {
+  margin-right: 93px;
 }
 
 /* Стили для контактов почты и тел. */
@@ -575,7 +582,7 @@ img {
 
   color: var(--footer-contacts-color);
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms var(--cubic);
 }
 .contacts .link:hover,
 .contacts .link:focus {
@@ -613,7 +620,7 @@ img {
 
   border-radius: 50%;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms var(--cubic);
 }
 .socials-link.company {
   fill: var(--primary-white-color);
@@ -623,7 +630,30 @@ img {
 .socials-link:focus {
   background-color: var(--accent-text-color);
 }
+/* Styles form footer form  */
 
+.label-mailing {
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
+}
+.button-mailing {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 12px;
+}
+.button-mailing:hover .icon-plane,
+.button-mailing:focus .icon-plane {
+  fill: var(--accent-text-color);
+}
+.icon-plane {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: var(--primary-white-color);
+}
 /* Класс для скрывания заголовков */
 .visually-hidden {
   position: absolute !important;
@@ -648,7 +678,7 @@ img {
   background-color: var(--backdrop-cl);
   visibility: visible;
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms var(--cubic);
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -673,8 +703,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms var(--cubic), background-color 550ms var(--cubic);
 }
 .close-btn {
   position: absolute;
