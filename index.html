@@ -404,7 +404,7 @@
         <form class="mailing-form" autocomplete="off">
           <b class="footer-calling">подпишитесь на рассылку</b>
           <div class="mailing-box">
-          <input class="input-mailing" type="email" name="name" id="mailing" placeholder=" ">
+          <input class="input-mailing" type="email" name="mailing" id="mailing" placeholder=" ">
           <label class="label-mailing" for="mailing">E-mail</label>
           </div>
           <button class="button primary button-mailing">Подписаться
@@ -419,49 +419,53 @@
       <div class="modal">
         <button class="close-btn" type="button" data-modal-close >
           <svg class="icon-close">
-            <use href="./images/modal_icons.svg#icon-close"></use>
+            <use href="./images/modal_icons.svg#icon-closemark"></use>
           </svg>
         </button>
         <form class="user-form" action="" autocomplete="off">
           <h3 class="title">Оставьте свои данные, мы вам перезвоним</h3>
-          <div class="form-field">
-            <label class="user-label" for="name">Имя</label>
+          <label class="form-field">
+            <span class="user-label">Имя</span>
             <div class="input-field">
             <input class="user-input" type="text" name="name" id="name">
             <svg class="icon icon-name">
-              <use href="./images/modal_icons.svg#icon-name"></use>
+              <use href="./images/modal_icons.svg#icon-person"></use>
             </svg>
             </div>
-          </div>
+            </label>
 
-          <div class="form-field">
-            <label class="user-label" for="tel">Телефон</label>
+          <label class="form-field">
+            <span class="user-label">Телефон</span>
             <div class="input-field">
-              <input class="user-input" type="tel" name="tel" id="tel">
+              <input class="user-input" type="tel" name="tel">
             <svg class="icon icon-name">
-              <use href="./images/modal_icons.svg#icon-tel"></use>
+              <use href="./images/modal_icons.svg#icon-phone"></use>
             </svg>
             </div>
-          </div>
+          </label>
 
-          <div class="form-field">
-            <label class="user-label" for="email">Почта</label>
+          <label class="form-field">
+            <span class="user-label">Почта</span>
             <div class="input-field">
-            <input class="user-input" type="email" name="email" id="email">
+            <input class="user-input" type="email" name="email">
                         <svg class="icon icon-name">
                           <use href="./images/modal_icons.svg#icon-mail"></use>
                         </svg>
                         </div>
-          </div>
+            </label>
           
-          <div class="form-field">
-            <label class="user-label" for="comment">Комментарий</label>
-            <textarea class="form-comment" name="comment" id="comment" placeholder="Введите текст"></textarea>
-          </div>
+          <label class="form-field">
+            <span class="user-label">Комментарий</span>
+            <textarea class="form-comment" name="comment" placeholder="Введите текст"></textarea>
+          </label>
 
-          <label for=""></label>
-          <input type="checkbox" name="policy">
-          <button type="button" class="button primary">Отправить</button>
+          
+          <label class="policy-box">
+            <input class="policy-checkbox" type="checkbox" name="policy">
+            <span class="policy-label" >Соглашаюсь с рассылкой и принимаю <a class="policy-link" href="#">Условия
+              договора</a></span>
+            </label>
+          <button type="submit" class="button primary">Отправить</button>
         </form>
       </div>
     </div>

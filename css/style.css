@@ -651,7 +651,9 @@ img {
   left: 15px;
   transform: translateY(-50%);
   transition: transform 250ms var(--cubic), color 250ms var(--cubic);
-
+}
+.label-mailing,
+.input-mailing {
   font-size: 16px;
   line-height: 1.25;
 }
@@ -659,7 +661,10 @@ img {
   background-color: transparent;
   padding: 15px 16px;
   width: 358px;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
   color: var(--footer-contacts-color);
 }
 .input-mailing:focus + .label-mailing,
@@ -714,14 +719,14 @@ img {
   pointer-events: none;
 }
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) scale(0.6);
   background-color: var(--primary-bg-color);
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) scale(1);
 
   width: 528px;
   height: 581px;
@@ -732,7 +737,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: transform 250ms var(--cubic), background-color 550ms var(--cubic);
+  transition: transform 250ms var(--cubic), background-color 350ms var(--cubic);
 }
 .close-btn {
   position: absolute;
@@ -753,8 +758,8 @@ img {
   transition: fill 250ms var(--cubic);
 }
 .icon-close {
-  width: 11px;
-  height: 11px;
+  width: 18px;
+  height: 18px;
 }
 
 .close-btn:hover {
@@ -773,17 +778,24 @@ img {
   text-align: center;
 }
 .form-field {
+  display: block;
   margin-bottom: 10px;
 }
 .form-field:nth-child(5) {
   margin-bottom: 20px;
 }
 .user-label {
-  display: inline-block;
+  display: block;
   margin-bottom: 4px;
+}
 
+.user-label:hover {
+  cursor: pointer;
+}
+.user-label,
+.user-input {
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.01em;
 }
 .input-field {
@@ -810,26 +822,17 @@ img {
 .user-form .icon {
   position: absolute;
   top: 50%;
+  left: 12px;
   transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
 
   fill: var(--title-text-color);
 }
-.icon-name {
-  width: 12px;
-  height: 12px;
-  left: 15px;
-}
-.icon-tel {
-  width: 13px;
-  height: 13px;
-  left: 14px;
-}
-.icon-mail {
-  width: 15px;
-  height: 12px;
-  left: 13.5px;
-}
+
 .form-comment {
+  display: block;
   padding: 12px 16px;
   width: 100%;
   height: 120px;
@@ -844,4 +847,26 @@ img {
 }
 .form-comment:focus {
   border-color: var(--accent-text-color);
+}
+.policy-box {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.policy-label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.714;
+}
+
+.policy-link {
+  cursor: pointer;
+  color: var(--accent-text-color);
+}
+
+.user-form .button.primary {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
