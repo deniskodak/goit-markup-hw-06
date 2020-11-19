@@ -875,7 +875,7 @@ img {
 .policy-label {
   position: relative;
   padding-left: 24px;
-  display: inline-block
+  display: inline-block;
   font-size: 14px;
   line-height: 1.714;
 }
@@ -916,6 +916,6 @@ img {
 }
 .user-form .button.primary:hover,
 .user-form .button.primary:focus {
-  background-color: #188CE8;
+  background-color: #188ce8;
   color: var(--primary-white-color);
 }
