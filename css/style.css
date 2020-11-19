@@ -764,7 +764,8 @@ img {
   height: 18px;
 }
 
-.close-btn:hover {
+.close-btn:hover,
+.close-btn:focus {
   fill: var(--accent-text-color);
   cursor: pointer;
 }
@@ -815,11 +816,9 @@ img {
   outline: none;
   transition: border-color 250ms var(--cubic);
 }
-.user-input:focus,
-.user-input:hover {
+.user-input:focus {
   border-color: var(--accent-text-color);
 }
-.user-input:hover + .icon,
 .user-input:focus + .icon {
   fill: var(--accent-text-color);
 }
@@ -849,12 +848,10 @@ img {
 
   transition: border-color 250ms var(--cubic);
 }
-.form-comment:focus,
-.form-comment:hover {
+.form-comment:focus {
   border-color: var(--accent-text-color);
 }
-.form-comment:focus::placeholder,
-.form-comment:hover::placeholder {
+.form-comment:focus::placeholder {
   color: var(--accent-text-color);
 }
 .policy-box {
@@ -888,7 +885,7 @@ img {
 .policy-checkbox:checked + .checkbox-icon {
   border-color: var(--accent-text-color);
   background-color: var(--accent-text-color);
-  background-image: url('../images/icon-checked.svg');
+  background-image: url('../images/modal/icon-checked.svg');
   background-origin: border-box;
   background-position: center;
   background-size: cover;
