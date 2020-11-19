@@ -770,7 +770,7 @@ img {
   cursor: pointer;
 }
 
-.user-form .title {
+.modal .title {
   margin-top: 0;
   margin-bottom: 12px;
 
@@ -784,7 +784,7 @@ img {
   display: block;
   margin-bottom: 10px;
 }
-.form-field:nth-child(5) {
+.form-field:nth-child(4) {
   margin-bottom: 20px;
 }
 .user-label {
@@ -913,4 +913,9 @@ img {
   display: block;
   margin-right: auto;
   margin-left: auto;
+}
+.user-form .button.primary:hover,
+.user-form .button.primary:focus {
+  background-color: #188CE8;
+  color: var(--primary-white-color);
 }
