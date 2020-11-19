@@ -28,7 +28,7 @@
 
       <ul class="contacts contacts-header list">
         <li class="item">
-          <a class="link icon-mail" href="mailto:info@devstudio.com">
+          <a class="link icon-email" href="mailto:info@devstudio.com">
             <svg class="icon-contacts" width="16" height="12">
               <use href="./images/sprite.svg#icon-envelope"></use>
             </svg>
@@ -373,7 +373,7 @@
           </address>
         </div>
         <div class="footer-box socials">
-          <p class="text">присоединяйтесь</p>
+          <b class="footer-calling">присоединяйтесь</b>
           <ul class="socials-list list">
             <li class="socials-item">
               <a class="link socials-link company" href="https://www.instagram.com/" target="_blank" aria-label="инстаграм">
@@ -401,13 +401,16 @@
             </a></li>
           </ul>
         </div>
-        <form>
-          <label for="mailing" class="label-mailing">подпишитесь на рассылку</label>
-          <input type="email" name="name" id="mailing" placeholder="E-mail">
+        <form class="mailing-form" autocomplete="off">
+          <b class="footer-calling">подпишитесь на рассылку</b>
+          <div class="mailing-box">
+          <input class="input-mailing" type="email" name="name" id="mailing" placeholder=" ">
+          <label class="label-mailing" for="mailing">E-mail</label>
+          </div>
           <button class="button primary button-mailing">Подписаться
             <svg class="icon icon-plane">
               <use href="./images/modal_icons.svg#icon-plane"></use>
-            </svg>
+            </svg> 
           </button>
         </form>
       </div>
@@ -419,21 +422,46 @@
             <use href="./images/modal_icons.svg#icon-close"></use>
           </svg>
         </button>
-        <form action="">
-          <label for="">Имя</label>
-          <input type="text">
-        
-          <label for="">Телефон</label>
-          <input type="tel">
-        
-          <label for="">Почта</label>
-          <input type="email">
-        
-          <label for="">Комментарий</label>
-          <textarea name="" id="" cols="30" rows="10" placeholder="Введите текст"></textarea>
-        
+        <form class="user-form" action="" autocomplete="off">
+          <h3 class="title">Оставьте свои данные, мы вам перезвоним</h3>
+          <div class="form-field">
+            <label class="user-label" for="name">Имя</label>
+            <div class="input-field">
+            <input class="user-input" type="text" name="name" id="name">
+            <svg class="icon icon-name">
+              <use href="./images/modal_icons.svg#icon-name"></use>
+            </svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="user-label" for="tel">Телефон</label>
+            <div class="input-field">
+              <input class="user-input" type="tel" name="tel" id="tel">
+            <svg class="icon icon-name">
+              <use href="./images/modal_icons.svg#icon-tel"></use>
+            </svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="user-label" for="email">Почта</label>
+            <div class="input-field">
+            <input class="user-input" type="email" name="email" id="email">
+                        <svg class="icon icon-name">
+                          <use href="./images/modal_icons.svg#icon-mail"></use>
+                        </svg>
+                        </div>
+          </div>
+          
+          <div class="form-field">
+            <label class="user-label" for="comment">Комментарий</label>
+            <textarea class="form-comment" name="comment" id="comment" placeholder="Введите текст"></textarea>
+          </div>
+
           <label for=""></label>
-          <input type="checkbox">
+          <input type="checkbox" name="policy">
+          <button type="button" class="button primary">Отправить</button>
         </form>
       </div>
     </div>

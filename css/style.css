@@ -506,7 +506,10 @@ img {
 }
 /* Стили для кнопок */
 .button {
-  display: inline-block;
+  display: inline-flex;
+  padding-right: 0px;
+  padding-left: 0px;
+
   font-family: Roboto;
   font-size: 16px;
   border: transparent;
@@ -515,14 +518,20 @@ img {
   transition: 250ms var(--cubic);
 }
 .button.primary {
-  padding: 10px 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  width: 200px;
+  align-items: center;
+  justify-content: center;
 
   color: var(--primary-white-color);
   background-color: var(--accent-text-color);
   font-weight: 700;
   line-height: 1.9;
-  align-items: center;
   letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .button.secondary {
   padding: 6px 22px;
@@ -600,7 +609,8 @@ img {
   margin-bottom: 9px;
 }
 
-.footer-box .text {
+.footer-calling {
+  display: block;
   margin-bottom: 20px;
 
   font-weight: bold;
@@ -631,13 +641,31 @@ img {
   background-color: var(--accent-text-color);
 }
 /* Styles form footer form  */
-
+.mailing-box {
+  display: inline-block;
+  position: relative;
+}
 .label-mailing {
-  display: block;
-  font-weight: 700;
-  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  transition: transform 250ms var(--cubic), color 250ms var(--cubic);
+
+  font-size: 16px;
+  line-height: 1.25;
+}
+.input-mailing {
+  background-color: transparent;
+  padding: 15px 16px;
+  width: 358px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--footer-contacts-color);
+}
+.input-mailing:focus + .label-mailing,
+.input-mailing:not(:placeholder-shown) + .label-mailing {
+  transform: translate(-150%, -50%);
   color: var(--primary-white-color);
-  margin-bottom: 20px;
 }
 .button-mailing {
   display: inline-flex;
@@ -697,6 +725,7 @@ img {
 
   width: 528px;
   height: 581px;
+  padding: 40px;
 
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -720,6 +749,8 @@ img {
   background-color: var(--primary-white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition: fill 250ms var(--cubic);
 }
 .icon-close {
   width: 11px;
@@ -727,5 +758,90 @@ img {
 }
 
 .close-btn:hover {
+  fill: var(--accent-text-color);
   cursor: pointer;
+}
+
+.user-form .title {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--title-text-color);
+  text-align: center;
+}
+.form-field {
+  margin-bottom: 10px;
+}
+.form-field:nth-child(5) {
+  margin-bottom: 20px;
+}
+.user-label {
+  display: inline-block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+.input-field {
+  position: relative;
+}
+.user-input {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+  padding-right: 12px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms var(--cubic);
+}
+.user-input:focus {
+  border-color: var(--accent-text-color);
+}
+.user-input:focus + .icon {
+  fill: var(--accent-text-color);
+}
+.user-form .icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  fill: var(--title-text-color);
+}
+.icon-name {
+  width: 12px;
+  height: 12px;
+  left: 15px;
+}
+.icon-tel {
+  width: 13px;
+  height: 13px;
+  left: 14px;
+}
+.icon-mail {
+  width: 15px;
+  height: 12px;
+  left: 13.5px;
+}
+.form-comment {
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  resize: none;
+  outline: none;
+
+  transition: border-color 250ms var(--cubic);
+}
+.form-comment:focus {
+  border-color: var(--accent-text-color);
 }
